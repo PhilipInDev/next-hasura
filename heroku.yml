@@ -6,7 +6,7 @@ setup:
     POSTGRES_PASSWORD: postgres
 build:
   docker:
-    web: ./Dockerfile
-    graphql-engine: hasura/graphql-engine:v2.0.10
+    web: Dockerfile
+    graphql-engine: hasura/graphql-engine:latest
 run:
   web: bundle exec puma -C config/puma.rb
