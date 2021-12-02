@@ -8,11 +8,3 @@ build:
   docker:
     web: Dockerfile
     graphql-engine: hasura/graphql-engine:v2.0.10
-    config:
-      HASURA_GRAPHQL_METADATA_DATABASE_URL: ${POSTGRES_DB_URL}
-      PG_DATABASE_URL: ${POSTGRES_DB_URL}
-      HASURA_GRAPHQL_ENABLE_CONSOLE: "false"
-      HASURA_GRAPHQL_DEV_MODE: "false"
-      HASURA_GRAPHQL_ENABLED_LOG_TYPES: startup, http-log, webhook-log, websocket-log, query-log
-run:
-  web:
