@@ -1,0 +1,12 @@
+
+setup:
+  addons:
+    - plan: heroku-postgresql
+      as: DATABASE
+  config:
+    POSTGRES_PASSWORD: postgres
+build:
+  docker:
+    web: Dockerfile
+run:
+  web: yarn start
