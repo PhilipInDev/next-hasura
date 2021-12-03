@@ -7,6 +7,5 @@ setup:
     POSTGRES_PASSWORD: postgres
 build:
   docker:
-    web: Dockerfile
-run:
-  web: yarn start
+    web: Dockerfile.nuxt
+    hasura: Dockerfile.hasura
