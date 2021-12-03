@@ -14,4 +14,4 @@ ENV HASURA_GRAPHQL_PG_CONNECTIONS=15
 CMD graphql-engine \
     --database-url $DATABASE_URL \
     serve \
-    --server-port $PORT
+    --server-port 8080
