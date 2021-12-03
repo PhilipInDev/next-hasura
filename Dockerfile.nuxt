@@ -8,6 +8,7 @@ WORKDIR /next-hasura/
 COPY ["package.json", "yarn.lock*", "./"]
 
 RUN yarn
+RUN yarn build
 
 COPY / .
 
