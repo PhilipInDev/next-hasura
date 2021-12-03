@@ -20,9 +20,11 @@ const getTailInfoMessage = (title, desc) => (
 `
 )
 
-const Tail = ({ jsonId, tails, error }) => {
+const Tail = ({ jsonId, res, tails, error }) => {
     const tailInfo = tails?.find(tail => tail.id === jsonId);
-    console.log(tails)
+    console.log(tails);
+    console.log(`json_id: ${jsonId}`);
+    console.log(res);
     return (
         <p className='paragraph'>
             <pre className={styles.code}>
@@ -59,6 +61,7 @@ export async function getServerSideProps(context) {
         return {
             props: {
                 jsonId,
+                res,
                 tails
             },
         }
